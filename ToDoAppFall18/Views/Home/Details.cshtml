@@ -1,0 +1,13 @@
+﻿@model ToDoAppFall18.Models.ToDo
+@{ 
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<h3>@Model.Description</h3>
+<p>
+    @Model.DueDate.ToShortDateString()
+</p>
+
+<a href="/">Home</a>

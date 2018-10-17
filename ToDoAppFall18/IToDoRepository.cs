@@ -9,5 +9,8 @@ namespace ToDoAppFall18
     public interface IToDoRepository
     {
         IEnumerable<ToDo> GetAll();
+        ToDo GetById(int id);
+        void Create(ToDo todo);
+        void Delete(ToDo todo);
     }
 }

@@ -1,0 +1,14 @@
+﻿@model ToDoAppFall18.Models.ToDo
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>WARNING:</h1>
+
+<h2>Are you sure you want to delete "@Model.Description"?</h2>
+<form action="/Home/Delete/@Model.Id" method="delete">
+    <button>Yes, Delete it.</button>
+    <a href="/">Nope, Cancel deletion.</a>
+</form>
+

@@ -12,10 +12,11 @@
         @foreach (var todo in Model)
         {
             <li>
-                @todo.Id - @todo.Description
+                <a href="/Home/Details/@todo.Id">@todo.Description</a><a href="/Home/Delete/@todo.Id">Delete</a>
             </li>
         }
-
     </ul>
+
+    <a href="/Home/Create">Create New Item</a>
 </section>
 
