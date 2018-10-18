@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20181018175917_CategoryMigration.cs" />
+    <Compile Remove="Migrations\20181018175917_CategoryMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181018180118_CategoryMigration.cs" />
+    <Compile Remove="Migrations\20181018180118_CategoryMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181018181144_ToDoCategoryMigration.cs" />
+    <Compile Remove="Migrations\20181018181144_ToDoCategoryMigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="IToDoRepository.cs" />
   </ItemGroup>
 

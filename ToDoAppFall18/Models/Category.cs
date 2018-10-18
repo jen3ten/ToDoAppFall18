@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace ToDoAppFall18.Models
 {
-    public class ToDo
+    public class Category
     {
         public int Id { get; set; }
-        public string Description { get; set; }
-        public DateTime DueDate { get; set; }
+        public string Name { get; set; }
         public List<ToDoCategory> ToDoCategories { get; set; }
-
     }
 }

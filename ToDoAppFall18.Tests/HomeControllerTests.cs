@@ -149,17 +149,28 @@ namespace ToDoAppFall18.Tests
         }
 
         [Fact]
-        public void Delete_Deletes_the_ToDo_Item()
+        public void DeleteConfirmed_Deletes_the_ToDo_Item()
         {
             var id = 42;  //Abstract the id value
             var toDelete = new ToDo();
             repo.GetById(id).Returns(toDelete); //Because we need to get the model by the Id
 
-            var result = sut.Delete(42);
+            var result = sut.DeleteConfirmed(42);
 
             //Delete is the method on the generic repo, called Repository
             repo.Received().Delete(toDelete);
         }
+
+        [Fact]
+        public void DeleteConfirmed_Redirects_To_Index()
+        {
+            var id = 1;
+
+            var result = sut.DeleteConfirmed(id);
+
+            Assert.IsType<RedirectToActionResult>(result);
+        }
+
 
     }
 }

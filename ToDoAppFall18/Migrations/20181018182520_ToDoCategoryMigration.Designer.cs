@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDoAppFall18.Models;
 
 namespace ToDoAppFall18.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20181018182520_ToDoCategoryMigration")]
+    partial class ToDoCategoryMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,11 +32,6 @@ namespace ToDoAppFall18.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new { Id = 1, Name = "Home" },
-                        new { Id = 2, Name = "Business" }
-                    );
                 });
 
             modelBuilder.Entity("ToDoAppFall18.Models.ToDo", b =>
@@ -50,10 +47,6 @@ namespace ToDoAppFall18.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ToDos");
-
-                    b.HasData(
-                        new { Id = 1, Description = "Learn to use this todo app", DueDate = new DateTime(2018, 10, 18, 15, 11, 52, 697, DateTimeKind.Local) }
-                    );
                 });
 
             modelBuilder.Entity("ToDoAppFall18.Models.ToDoCategory", b =>

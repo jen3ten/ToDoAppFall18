@@ -7,8 +7,7 @@
 <h1>WARNING:</h1>
 
 <h2>Are you sure you want to delete "@Model.Description"?</h2>
-<form action="/Home/Delete/@Model.Id" method="delete">
+<form action="/Home/DeleteConfirmed/@Model.Id" method="post">
     <button>Yes, Delete it.</button>
     <a href="/">Nope, Cancel deletion.</a>
 </form>
-

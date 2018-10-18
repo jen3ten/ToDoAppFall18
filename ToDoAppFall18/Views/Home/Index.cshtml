@@ -8,14 +8,14 @@
     <p>This is the index.</p>
 
 <section>
-    <ul>
+    <ol>
         @foreach (var todo in Model)
         {
             <li>
                 <a href="/Home/Details/@todo.Id">@todo.Description</a><a href="/Home/Delete/@todo.Id">Delete</a>
             </li>
         }
-    </ul>
+    </ol>
 
     <a href="/Home/Create">Create New Item</a>
 </section>
