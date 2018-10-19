@@ -9,8 +9,8 @@ namespace ToDoAppFall18.Models
     {
         public int Id { get; set; }
         public int ToDoId { get; set; }
-        public ToDo ToDo { get; set; }
+        public virtual ToDo ToDo { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

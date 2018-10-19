@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace ToDoAppFall18.Models
 {
-    public class Category
+    public class Owner
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual List<ToDoCategory> ToDoCategories { get; set; }
+        public virtual List<ToDo> ToDos { get; set; }
     }
 }
